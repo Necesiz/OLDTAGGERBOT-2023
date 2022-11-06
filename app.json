@@ -27,19 +27,7 @@
     "API_HASH": {
       "description": "Bu değeri my.telegram.org'dan alın! Lütfen çalmayın",
       "value": ""
-    } 
-  },
-  "addons": [
-    {
-      "plan": "heroku-postgresql",
-      "options": {
-        "version": "12"
-      }
     }
-  ],
-  "buildpacks": [
-    {
-      "url": "heroku/python"
-    }
-  ]
+  }
 }
+
