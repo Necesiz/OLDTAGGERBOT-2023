@@ -27,6 +27,7 @@
     "API_HASH": {
       "description": "Bu değeri my.telegram.org'dan alın! Lütfen çalmayın",
       "value": ""
+    } 
   },
   "addons": [
     {
