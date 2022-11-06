@@ -12,9 +12,6 @@
   "website": "https://github.com/Mahoaga06/Tag-members", 
   "success_url": "t.me/TaliaSupport",
   "env": {
-    "ENV": {
-      "description": "Bunu HERHANGİ BİR ŞEY, olarak ayarlamak heroku'yu etkinleştirir.",
-      "value": "ANYTHING"
     },
     "TOKEN": {
       "description": "Bot Jetonunuz.",
