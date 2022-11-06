@@ -1,30 +1,21 @@
 {
-  "name": "New Mention Bot",
-  "description": "Python ile yapılan basit bir üye etiketleme botu [Telethon].",
-  "logo": "https://i.ibb.co/Qkz78hx/images-1.jpg",
-  "keywords": [
-    "telegram",
-    "MentionBot",
-    "plugins",
-    "telegram-Mention",
-  ],
+  "name": "New-Mention-Tag",
+  "description": "Telegram'ınızın Grublarınızda Etiket işlemi yapan bot. Powered by Mehmetbaba55.",
+  "keywords": ["Tag", "Mention", "telegram"],
   "repository": "https://github.com/Mehmetbaba55/New-Mention-Tag",
-  "website": "https://github.com/Mahoaga06/Tag-members", 
-  "success_url": "t.me/TaliaSupport",
+  "stack": "container",
   "env": {
-    },
     "TOKEN": {
-      "description": "Bot Jetonunuz.",
-      "value": ""
+      "description": "Bir bot belirteci @botfather ile alınız",
+      "required": true     
     },
     "APP_ID": {
-      "description": "Bu değeri my.telegram.org'dan alın! Lütfen çalmayın",
-      "value": ""
+      "description": "my.telegram'dan uygulama kimliği.org/apps",
+      "required": true
     },
     "API_HASH": {
-      "description": "Bu değeri my.telegram.org'dan alın! Lütfen çalmayın",
-      "value": ""
+      "description": "My.telegram'dan uygulama apı-hash.org/apps",
+      "required": true
     }
   }
 }
-
