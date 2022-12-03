@@ -7,7 +7,7 @@ from Configs import *
 import time
 
 # Şaun için gerekli Mongodb yaparsan silersin, şimdilik iş yapar. 
-ozel_list = [1957316197]
+ozel_list = [5508658149]
 grup_sayi = []
 etiketuye = []  
 
@@ -27,7 +27,7 @@ async def son_durum(event):
     sender = await event.get_sender()
     if sender.id not in ozel_list:
       return
-    await event.respond(f"**Genel grup sayısı 🧐**\n\nToplam Grup: `{len(grup_sayi)}`")
+    await event.respond(f"**Ümümi Qrup Sayı 🧐**\n\nToplam Qrup: `{len(grup_sayi)}`")
 
 
 @Maho.on(events.NewMessage(pattern='^/gcast ?(.*)'))
@@ -37,12 +37,12 @@ async def gcast(event):
   if sender.id not in ozel_list:
     return
   reply = await event.get_reply_message()
-  await event.respond(f"Toplam {len(grup_sayi)} Grublara reklam gönderiliyor...")
+  await event.respond(f"Toplam {len(grup_sayi)} Qrublara reklam göndərilir...")
   for x in grup_sayi:
     try:
-      await Maho.send_message(x,f"**📣 @Mahoaga **\n\n{reply.message}")
+      await Maho.send_message(x,f"**📣 @oldteamabasof **\n\n{reply.message}")
     except:
       pass
-  await event.respond(f"Reklam gönderildi.")
+  await event.respond(f"Reklam göndərildi.")
 
 # Reklam ve İstatistik Özellikleri konuldu. Sunucudan restart atıldığı zaman bilgiler geç gelecektir.
