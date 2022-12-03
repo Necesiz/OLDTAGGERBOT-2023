@@ -3,6 +3,6 @@
 import os
 
 class Config(object):
-    APP_ID = int(os.environ.get("APP_ID", 23860620))
-    API_HASH = os.environ.get("API_HASH", 347c94d92d0bbcfbc223651b73d71345)
-    TOKEN = os.environ.get("TOKEN", 5740066159:AAGjgisqBiEkV1o0IXk7nd-A3hx6cjb1INE)
+    API_ID = int(getenv("API_ID", "17568815"))
+    API_HASH = getenv("API_HASH", "177622d39f23e7c3d015f3d6ebaacd31")
+    TOKEN = getenv("BOT_TOKEN", "5740066159:AAGjgisqBiEkV1o0IXk7nd-A3hx6cjb1INE)
