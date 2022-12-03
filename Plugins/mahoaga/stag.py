@@ -159,7 +159,7 @@ async def mentionall(event):
   global anlik_calisan 
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond(""Bu əmri sadəcə qrub vəya kanallarda edə bilərsiz..")
+    return await event.respond("Bu əmri sadəcə qrub vəya kanallarda edə bilərsiz..")
   
   admins = []
   async for admin in Maho.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
@@ -174,7 +174,7 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("__Köhmə Mesajlar Üçün Kullanıcılardan Bəhs edənmərəm! (qruba əlavə etmədən öncə göndərilən mesajlar)__")
+        return await event.respond("__Köhnə Mesajlar Üçün Kullanıcılardan Bəhs edənmərəm! (qruba əlavə etmədən öncə göndərilən mesajlar)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("Mənə bir mətin verin.")
   else:
