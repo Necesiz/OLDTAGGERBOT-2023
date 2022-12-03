@@ -22,7 +22,7 @@ async def cancel_spam(event):
       anlik_calisan.remove(event.chat_id)
     except:
       pass
-    return await event.respond('✅ Etiket işlemi başarıyla durduruldu.')
+    return await event.respond('✅ Tag prosesi başarıyla dayandırıldı.')
 
 
 @Maho.on(events.NewMessage(pattern="^/futbol ?(.*)"))
@@ -30,13 +30,13 @@ async def mentionall(event):
   global anlik_calisan 
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("Bu komutu sadece grup veya kanallarda kullanabilirsiniz.")
+    return await event.respond("Bu əmri sadəcə qrub vəya kanallarda edə bilərsiz..")
   
   admins = []
   async for admin in Maho.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu komutu sadece yöneticiler kullanabilir.**")
+    return await event.respond("**Bu əmiri sadəcə yönəticlər isdifadə edə bilər.**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -45,11 +45,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("__Eski Mesajlar için Üyelerden Bahsedemem! (gruba eklemeden önce gönderilen mesajlar)__")
+        return await event.respond("__Köhmə Mesajlar Üçün Kullanıcılardan Bəhs edənmərəm! (qruba əlavə etmədən öncə göndərilən mesajlar)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Bana bir metin verin.")
+    return await event.respond("Mənə bir mətin verin.")
   else:
-    return await event.respond("**Etikete Başlamak için sebep yazın... ✋\n\n(Örnek: /futbol Herkese Merhaba!)**")
+    return await event.respond("**Tag'a Başlamaq üçün səbəb yazın... ✋\n\n(Məsələn: /futbol Salam!)**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -72,7 +72,7 @@ async def mentionall(event):
     sender = await event.get_sender()
     rxyzdev_initT = f"{sender.first_name}"      
     if event.chat_id in rxyzdev_tagTot:
-           a = await event.respond(f"**✅ Etiket işlemi başarıyla durduruldu.**\n\n**Etiketlenen Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
+           a = await event.respond(f"**✅Tag prosesi başarıyla dayandırıldı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
            await sleep(10)
            await a.delete()
 
@@ -96,7 +96,7 @@ async def mentionall(event):
     sender = await event.get_sender()
     rxyzdev_initT = f"{sender.first_name}"      
     if event.chat_id in rxyzdev_tagTot:
-           a = await event.respond(f"**✅ Etiket işlemi başarıyla durduruldu.**\n\n**Etiketlenen Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
+           a = await event.respond(f"**✅ Tag prosesi başarıyla dayandırıldı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
            await sleep(10)
            await a.delete()
 
