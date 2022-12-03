@@ -30,7 +30,7 @@ async def cancel_spam(event):
 async def mentionall(event):
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond('"Bu əmri sadəcə qrub vəya kanallarda edə bilərsiz..")
+    return await event.respond("Bu əmri sadəcə qrub vəya kanallarda edə bilərsiz..")
   
   admins = []
   async for admin in Maho.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
