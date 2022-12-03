@@ -11,40 +11,40 @@ async def start(event):
   if event.is_private:
     async for usr in Maho.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await Maho.send_message(-1001210894866, f"ℹ️ **Start Veren Kullanıcı -** {ad}")
-     return await event.reply(f"**Merhaba\nBenim Görevim Üyeleri Etiketlemektir.\nKomutlar için Komutlar butonuna basınız.**", buttons=(
+     await Maho.send_message(-1001641489645, f"ℹ️ **Start Verən Kullanıcı -** {ad}")
+     return await event.reply(f"**Salam\Mənim Görəvim Kullanıcıları Tag Etməkdir.\nƏmirlər üçün Əmirlər butonuna basınız.**", buttons=(
                       [
-                       Button.inline("Komutlar", data="komutlar")
+                       Button.inline("Əmirlər", data="komutlar")
                       ],
                       [
-                       Button.url('↘️ Gruba Ekle', 'http://t.me/Sensizolmaz_bot?startgroup=a'),
-                       Button.url('📣 Kanal', 'https://t.me/TaliaSupport')
+                       Button.url('➕ Qruba Eklə', 'http://t.me/oldtaggerbot?startgroup=a'),
+                       Button.url('📣 Kanal', 'https://t.me/oldsupport')
                       ],
                       [
-                       Button.url('🇹🇷 Sahibim', 'https://t.me/Mahoaga')
+                       Button.url('☯️ Sahibim', 'https://t.me/SS_WOLF')
                       ],
                     ),
                     link_preview=False)
 
 
   if event.is_group:
-    return await Maho.send_message(event.chat_id, f"**Beni Grubuna Aldığın için Teşekkürler ✨**")
+    return await Maho.send_message(event.chat_id, f"**Məni Qrubuna Aldığın Üçün Təşəkkürlər ✨**")
 
 # Başlanğıc Button
 @Maho.on(events.callbackquery.CallbackQuery(data="start"))
 async def handler(event):
     async for usr in Maho.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"**Merhaba Benim adım Tagger\nGörevim Üyeleri Etiketlemek\nKomutlar için Komutlar Düğmesine Basın.**", buttons=(
+     await event.edit(f"**Salam Mənim adım OLD Tagger\nGörəvim kullanıcılar Tag etmək\nƏmirlər üçün Əmirlər Butonuna Basın.**", buttons=(
                       [
-                       Button.inline("Komutlar", data="komutlar")
+                       Button.inline("Əmirlər", data="komutlar")
                       ],
                       [
-                       Button.url('↘️ Gruba Ekle', 'http://t.me/Sensizolmaz_bot?startgroup=a'),
-                       Button.url('📣 Kanal', 'https://t.me/TaliaSupport')
+                       Button.url('↘️ Qruba Eklə', 'http://t.me/oldtaggerbot?startgroup=a'),
+                       Button.url('📣 Kanal', 'https://t.me/oldsupport')
                       ],
                       [
-                       Button.url('🇹🇷 Sahibim', 'https://t.me/Mahoaga')
+                       Button.url('☯️ Sahibim', 'https://t.me/SS_WOLF')
                       ],
                     ),
                     link_preview=False)
@@ -52,7 +52,7 @@ async def handler(event):
 # Maho aga
 @Maho.on(events.callbackquery.CallbackQuery(data="komutlar"))
 async def handler(event):
-    await event.edit(f"**Komutlarım:\n\n/tag Toplu etiket atar..\n/yt Sadece yöneticileri etiketlemek içindir.\n/ttag Tek tek etiketleme yapar.\n/btag Bayraklar ile etiketlemek içindir.\n/stag Sözler ile etiketler.\n/itag İsimler ile etiketlemek içindir.\n/futbol Futbolcu isimleri ile etiketleme.\n/etag Emojiler ile etiketleme işlemidir.\n/cancel - Sonlandırır... \n\n❗ Yalnızca yöneticiler bu komutları kullanabilir.**", buttons=(
+    await event.edit(f"**Əmirlərim:\n\n/tag Toplu tag atar..\n/yt Sadəcə yönəticiləri tag etmək üçündür.\n/ttag Tək tək Tag edər.\n/btag Bayraqlar ilə Tag etmək üçündür.\n/stag Sözlər ilə tag edər.\n/itag İsimlər ilə tag etmək üçündür.\n/futbol Futbolcu adları ilə tag edər.\n/etag Emojilər ilə tag edər.\n/cancel - Sonlandırır... \n\n❗ Yalnızca yönəticilər bu əmri isdifadə edə bilər.**", buttons=(
                       [
                       Button.inline("◀️ Geri", data="start")
                       ]
