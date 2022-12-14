@@ -1,1 +1,1 @@
-bot: python3 -m Plugins 
+bash: python3 -m Plugins 
