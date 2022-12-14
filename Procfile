@@ -1,1 +1,1 @@
-bot: python3 -m Plugins 
+web: python3 -m Plugins 
