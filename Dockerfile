@@ -18,4 +18,4 @@ RUN mkdir /MissPerfectURL
 WORKDIR /MissPerfectURL
 
 # Running MessageSearchBot
-CMD ["python", "bot.py"]
+CMD ["python3", "-m", "Plugins"]
