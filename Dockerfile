@@ -1,21 +1,10 @@
-# Python Based Docker
-FROM python:latest
+FROM python:3.9.10
 
-# Installing Packages
-RUN apt update && apt upgrade -y
-RUN apt install git curl python3-pip ffmpeg -y
-
-# Updating Pip Packages
+WORKDIR /Plugins 
+COPY . /Plugins 
+ 
 RUN pip3 install -U pip
-
-# Copying Requirements
-COPY requirements.txt /requirements.txt
-
-# Installing Requirements
-RUN cd /
+COPY requirements.txt .
 RUN pip3 install -U -r requirements.txt
-RUN mkdir /MissPerfectURL
-WORKDIR /MissPerfectURL
 
-# Running MessageSearchBot
 CMD ["python3", "-m", "Plugins"]
